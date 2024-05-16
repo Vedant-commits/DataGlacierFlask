@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Deployment</title>
+</head>
+<body>
+    <h1>Model Deployment</h1>
+    <form action="/predict" method="post">
+        <input type="number" name="feature1" placeholder="Enter feature 1">
+        <input type="number" name="feature2" placeholder="Enter feature 2">
+        <input type="number" name="feature3" placeholder="Enter feature 3">
+        <input type="number" name="feature4" placeholder="Enter feature 4">
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction_text %}
+        <p>Prediction: {{ prediction_text }}</p>
+    {% endif %}
+</body>
+</html>
